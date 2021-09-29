@@ -157,3 +157,88 @@ a.box i {
 a.box i:hover {
   transform: rotateZ(-45deg);
 }
+
+/* BUTTON FIVE */
+.five {
+  display: inline-block;
+  padding: 14px 50px;
+  text-decoration: none;
+  color: white;
+  background-color: darkblue;
+  border-radius: 30px;
+  text-transform: uppercase;
+}
+
+.five:hover {
+  animation-name: zoom;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+}
+
+@keyframes zoom {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* SIX */
+
+.six {
+  display: inline-block;
+  padding: 10px 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+
+  position: relative;
+  transition: 1s;
+}
+
+.six::after {
+  position: absolute;
+  content: '';
+  top: -4px;
+  left: -10px;
+  height: 100%;
+  width: 10px;
+  border-left: 4px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  transition: 0.4s;
+}
+
+.six::before {
+  position: absolute;
+  content: '';
+  top: -4px;
+  right: -10px;
+  height: 100%;
+  width: 10px;
+  border-right: 4px solid black;
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  transition: 0.4s;
+}
+
+.six:hover::after {
+  left: 0px;
+  width: 15px;
+}
+
+.six:hover::before {
+  right: 0;
+  width: 15px;
+}
